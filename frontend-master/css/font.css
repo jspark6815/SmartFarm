@@ -1,0 +1,10 @@
+@font-face {
+    font-family: '! PEPSI !';
+    font-style: normal;
+    font-weight: normal;
+    src: local('! PEPSI !'), url('../font/PEPSI_pl.woff') format('woff');
+}
+@font-face {
+    font-family: 'KoPubDotumMedium';
+    src: url('../font/KoPubDotumMedium.woff');
+}

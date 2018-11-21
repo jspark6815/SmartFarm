@@ -1,0 +1,34 @@
+body {
+    margin: 0 0;
+    font-family: 'KoPubDotumMedium';
+}
+#container1 {
+    width: 100vw;
+    height: 38vh;
+}
+#container1 img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+#header_text {
+    padding-top: 160px;
+    padding-left: 30px;
+    color: white;
+    font-weight: lighter;
+    position: relative;
+    z-index: 5;
+}
+#header_text span {
+    background-image: linear-gradient(315deg, #138a53, #155898);
+    padding: 4px 4px;
+    font-size: 24px;
+}
+#footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+br {
+    line-height: 200%;
+}

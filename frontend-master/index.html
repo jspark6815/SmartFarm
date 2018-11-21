@@ -6,7 +6,8 @@
         <title>My Little Farm App</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
-        <script src="main.js"></script>
+        <link rel="stylesheet" href="./css/font.css">
+        <script src="./js/main.js"></script>
     </head>
     <body>
         <div id="container1">
@@ -20,8 +21,33 @@
                 MY LITTLE FARM
             </div>
         </div>
-        <div>
-            
+        <div id="container2">
+            <div id="selector">
+                <span>Log In</span>
+                <span>Register</span>
+            </div>
+            <div id="form_white">
+                <div id="logo">
+                    <img src="./assets/logo_c.png" alt="logo">
+                </div>
+                <div id="login_text">Log In</div>
+
+                <hr>
+
+                <form action="./">
+                    <input type="text" placeholder="ID">
+                    <input type="text" placeholder="PASSWORD">
+                    <div id="sub">
+                        <div class="btn">
+                            <button id="pass" type="button">비밀번호 찾기</button>
+                            <button id="register_href" type="button">회원가입</button>
+                        </div>
+                        <div id="submit">
+                            <input type="submit" value="Log In">
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </body>
 </html>
