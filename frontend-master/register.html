@@ -7,20 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
         <link rel="stylesheet" href="./css/font.css">
-        <script src="./js/main.js"></script>
     </head>
     <body>
-        <div id="container1">
-            <div id="main_img">
-                <img src="./assets/logo_c.png" alt="logo">
-            </div>
-            <div id="watchword">
-                내 손 안의 <span>작은 농장</span>
-            </div>
-            <div id="naming">
-                MY LITTLE FARM
-            </div>
-        </div>
         <div id="container2">
             <div id="selector">
                 <span>Log In</span>
@@ -35,15 +23,15 @@
                 <hr>
 
                 <form action="./first.html">
-                    <input type="text" id="ID" placeholder="ID">
-                    <input type="password" placeholder="PASSWORD">
+                    <input type="text" placeholder="ID">
+                    <input type="text" placeholder="PASSWORD">
                     <div id="sub">
                         <div class="btn">
                             <button id="pass" type="button">비밀번호 찾기</button>
                             <button id="register_href" type="button">회원가입</button>
                         </div>
                         <div id="submit">
-                            <button onclick="localStorage.id = document.getElementById('ID').value;">Log In</button>
+                            <button>Log In</button>
                         </div>
                     </div>
                 </form>
