@@ -5,8 +5,9 @@ body {
 #container1 {
     width: 100vw;
     height: 38vh;
+    margin-bottom: 85vh;
 }
-#container1 img {
+#container1 #header_img {
     width: 100%;
     position: absolute;
     top: 0;
@@ -26,9 +27,78 @@ body {
 }
 #footer {
     width: 100%;
-    position: absolute;
-    bottom: 0;
 }
 br {
     line-height: 200%;
+}
+
+#contents1 {
+    color: rgba(83, 83, 83, 0.7);
+    margin-top: 60px;
+    font-size: 12px;
+}
+#contents1 p {
+    margin-left: -40px;
+}
+#contents1 p span {
+    font-size: 8px;
+}
+input[type="text"] {
+    border: none;
+    background-color: #eeeeee;
+    border-radius: 25px;
+    
+    padding-left: 30px;
+
+    height: 40px;
+    width: 60vw;
+}
+#submit {
+    background-image: linear-gradient(to right, #006175 0%, #00a950 100%);
+    border-radius: 40px;
+    box-sizing: border-box;
+    color: #159759;
+    display: block;
+    height: 35px;
+    padding: 1px;
+    position: relative;
+    width: 120px;
+    border: none;
+    z-index: 7;
+
+    margin-top: 10px;
+    margin-left: 130px;
+}
+#submit button {
+    align-items: center;
+    background: white;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: #157f71;
+    border: none;
+
+    padding: 0 0;
+    margin: 0 0;
+}
+
+#basil_content {
+    display: none;
+}
+#basil_content img {
+    width: 60vw;
+    margin-top: 15px;
+}
+#nickname {
+    display: none;
+}
+
+.flexible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    flex-direction: column;
 }

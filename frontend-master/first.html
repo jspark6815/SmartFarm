@@ -7,13 +7,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="./css/first.css" />
         <link rel="stylesheet" href="./css/font.css">
+        <script src="./js/selector.js"></script>
     </head>
     <body>
         <div id="container1">
-            <img src="assets/back.png" alt="back.png">
+            <img id="header_img" src="assets/back.png" alt="back.png">
             <div id="header_text">
                 <span>My Little Farm</span>이<br>
                 처음이신가요?
+            </div>
+            <div id="contents1" class="flexible">
+                <p>제품 코드를 입력해주세요. <span>(설명서 내부 참고)</span></p>
+                <input type="text" id="code" placeholder="CODE" required>
+                <div id="submit">
+                    <button onclick="first_conf();">Confirm</button>
+                </div>
+                <div class="flexible" id="basil_content">
+                    <img src="./assets/product_basil.png" alt="">
+                </div>
+                <div class="flexible" id="nickname">
+                    <p>애칭을 입력해주세요. <span>(특수 기호 불가/6자 이내)</span></p>
+                    <input type="text" placeholder="쑥쑥이">
+                    <div id="submit">
+                        <button>Confirm</button>
+                    </div>
+                </div>
             </div>
         </div>
         <img src="./assets/footer.png" id="footer" alt="">
