@@ -17,6 +17,24 @@ body {
   height: 50vh;
   width: 100vw;
   background-image: url('../assets/back_img.png');
+  background-size: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  flex-direction: column;
+}
+#header img {
+  width: 60vw;
+}
+#nick {
+  background-image: linear-gradient(315deg, #138a53, #155898);
+  padding: 4px 4px;
+}
+#header p {
+  margin: 0;
+  color: white;
 }
 #content {
   margin-top: 20px;
@@ -46,6 +64,9 @@ body {
   height: 13px;
   width: 10px;
   margin-right: 5px;
+}
+.status-stat {
+  text-align: center;
 }
 .status .status-value::after {
   font-size: 30px;
@@ -118,4 +139,21 @@ body {
 .status-header div {
   flex: 1;
   display: inline-block;
+}
+
+/* add */
+.wrapper button {
+  background-color: green;
+  border: none;
+  border-radius: 25px;
+  width: 100px;
+  height: 50px;
+  color: white;
+  transition: background-color 0.1s ease-in-out;
+}
+#btn {
+  margin: 15px 30px;
+}
+.wrapper button:active {
+  background-color: #a53838;
 }

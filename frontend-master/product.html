@@ -7,35 +7,50 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="./css/product.css" />
         <link rel="stylesheet" href="./css/font.css">
+        <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+        <script src="./js/product.js"></script>
+        <script>
+          console.log(localStorage.nick);
+        </script>
     </head>
     <body>
         <div id="container1">
           <div id="header">
-            
+            <img src="./assets/basil.png" alt="">
+            <p><span id="nick"></span> (바질 Basil)</p>
           </div>
           <div id="content">
             <div class="content-title">현재 내 <span>화분 상태</span></div>
             <div class="status-list">
               <div class="status status-temperature">
                 <div class="wrapper">
-                  <div class="status-header"><div>현재 온도</div><span class="status-stat stat-high">너무 높음</span></div>
-                  <div class="status-value">19.3</div>
+                  <div class="status-header"><div>현재 온도</div><span class="status-stat stat-high" id="temperature_stat">너무 높음</span></div>
+                  <div class="status-value" id="temperature">0.0</div>
                 </div>
               </div>
               <div class="status status-humidity">
                 <div class="wrapper">
-                  <div class="status-header"><div>현재 습도</div><span class="status-stat stat-low">너무 낮음</span></div>
-                  <div class="status-value">31</div>
+                  <div class="status-header"><div>현재 습도</div><span class="status-stat stat-low" id="humidity_stat">너무 낮음</span></div>
+                  <div class="status-value" id="humidity">0</div>
                 </div>
               </div>
               <div class="status status-illumination">
                 <div class="wrapper">
-                  <div class="status-header"><div>현재 조도</div><span class="status-stat stat-middle">적당함</span></div>
-                  <div class="status-value">49</div>
+                  <div class="status-header"><div>현재 조도</div><span class="status-stat stat-middle" id="illumination_stat">적당함</span></div>
+                  <div class="status-value" id="illumination">0</div>
+                </div>
+              </div>
+              <div>
+                <div class="wrapper" id="btn">
+                  <button type="button" onclick="dd();">물주기!</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
     </body>
+    <script>
+      document.getElementById('nick').innerHTML = localStorage.nick;
+    </script>
+    <script  src="./js/product_excute.js"></script>
 </html>

@@ -10,6 +10,11 @@
         <script src="./js/selector.js"></script>
         <script>
             alert('환영합니다. ' + localStorage.id + '님');
+            function second_conf() {
+                localStorage.nick = document.getElementById('nick_name').value;
+                console.log(localStorage.nick);
+                location.href = "./product.html";
+            }
         </script>
     </head>
     <body>
@@ -30,9 +35,9 @@
                 </div>
                 <div class="flexible" id="nickname">
                     <p>애칭을 입력해주세요. <span>(특수 기호 불가/6자 이내)</span></p>
-                    <input type="text" placeholder="쑥쑥이">
+                    <input type="text" id="nick_name" placeholder="쑥쑥이">
                     <div id="submit">
-                        <button>Confirm</button>
+                        <button onclick="second_conf();">Confirm</button>
                     </div>
                 </div>
             </div>

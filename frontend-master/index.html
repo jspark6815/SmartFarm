@@ -34,16 +34,16 @@
 
                 <hr>
 
-                <form action="./first.html">
+                <form >
                     <input type="text" id="ID" placeholder="ID">
-                    <input type="password" placeholder="PASSWORD">
+                    <input type="password" id="PASS" placeholder="PASSWORD">
                     <div id="sub">
                         <div class="btn">
                             <button id="pass" type="button">비밀번호 찾기</button>
                             <button id="register_href" type="button">회원가입</button>
                         </div>
                         <div id="submit">
-                            <button onclick="localStorage.id = document.getElementById('ID').value;">Log In</button>
+                            <button type="button" onclick="localStorage.id = document.getElementById('ID').value; loging();">Log In</button>
                         </div>
                     </div>
                 </form>
