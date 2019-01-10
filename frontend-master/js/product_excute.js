@@ -2,7 +2,7 @@ function excute() {
     document.getElementById('humidity').innerHTML = map.humidity;
     document.getElementById('temperature').innerHTML = map.temperature;
     document.getElementById('illumination').innerHTML = map.illumination;
-    
+    document.getElementById('watered').innerHTML = map.water * 0.1;
     //temperature setting
     if(map.temperature > 25) {
         document.getElementById('temperature_stat').innerHTML = "너무 높음";
