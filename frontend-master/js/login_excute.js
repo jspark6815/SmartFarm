@@ -19,11 +19,10 @@ function excute() {
 function login() {
     let id = document.getElementById('ID').value;
     let pass = document.getElementById('PASS').value;
-    console.log('asddddf');
-    firebase.database().ref('/fablab1/').set({
+    firebase.database().ref('/'+id+'/').set({
         id: map[id].id,
         password: map[id].password,
-        enter: 1,
+        enter: map[id].enter+1,
         data: {
             button: map[id].data.button,
             humidity: map[id].data.humidity,
@@ -32,5 +31,9 @@ function login() {
             water: map[id].data.water
         }
     })
-    console.log('1');
+    if(map[id].enter > 1) {
+        location.href = './product.html';
+    } else {
+        location.hash = './first.html';
+    }
 }
