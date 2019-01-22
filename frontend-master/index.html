@@ -7,7 +7,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
         <link rel="stylesheet" href="./css/font.css">
+        <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
         <script src="./js/main.js"></script>
+        <script src="./js/login.js"></script>
+        <script src="./js/login_excute.js"></script>
     </head>
     <body>
         <div id="container1">
@@ -43,7 +46,7 @@
                             <button id="register_href" type="button">회원가입</button>
                         </div>
                         <div id="submit">
-                            <button type="button" onclick="localStorage.id = document.getElementById('ID').value; loging();">Log In</button>
+                            <button type="button" onclick="excute();">Log In</button>
                         </div>
                     </div>
                 </form>
