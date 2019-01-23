@@ -34,6 +34,6 @@ function login() {
     if(map[id].enter > 1) {
         location.href = './product.html';
     } else {
-        location.hash = './first.html';
+        location.href = './first.html';
     }
 }
