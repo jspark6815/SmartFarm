@@ -146,14 +146,15 @@ body {
 .wrapper button {
   background-color: green;
   border: none;
-  border-radius: 25px;
-  width: 94px;
+  border-radius: 100px;
+  width: 30vw;
   height: 50px;
   color: white;
   transition: background-color 0.1s ease-in-out;
 }
 #btn {
-  margin: 15px 30px;
+  margin: 15px 0px 15px 7vw;
+  font-family: 'KoPubDotumMedium';
 }
 .wrapper button:active {
   background-color: #a53838;
