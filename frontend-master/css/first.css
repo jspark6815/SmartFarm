@@ -4,7 +4,7 @@ body {
 }
 #container1 {
     width: 100vw;
-    height: 38vh;
+    height: 35vh;
     margin-bottom: 85vh;
 }
 #container1 #header_img {
@@ -13,7 +13,7 @@ body {
     top: 0;
 }
 #header_text {
-    padding-top: 160px;
+    padding-top: 23vh;
     padding-left: 30px;
     color: white;
     font-weight: lighter;

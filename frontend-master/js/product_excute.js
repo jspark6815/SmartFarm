@@ -2,8 +2,6 @@ function excute() {
     let humidity = parseInt(map.data.humidity / 10.1);
     let temperature = parseInt(map.data.temperature);
     let illumination = parseInt(map.data.illumination);
-    console.log('origin temperature: '+map.data.temperature);
-    console.log('temperature: '+temperature);
     document.getElementById('humidity').innerHTML = humidity;
     document.getElementById('temperature').innerHTML = temperature;
     document.getElementById('illumination').innerHTML = illumination;
@@ -30,8 +28,6 @@ function excute() {
     }
 
     //illumination setting
-    console.log('origin illumination: '+map.data.illumination);
-    console.log('illumination: '+illumination);
     if(illumination > 800) {
         document.getElementById('illumination_stat').innerHTML = "강해요ㅠ";
     }
