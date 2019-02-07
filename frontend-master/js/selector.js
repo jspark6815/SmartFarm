@@ -1,6 +1,6 @@
 function first_conf() {
     var code = document.getElementById('code').value;
-    if(code == '247651-518924')
+    if(code == productCode)
     {
         document.getElementById('submit').style.display = "none";
         document.getElementById('basil_content').style.display = "flex";

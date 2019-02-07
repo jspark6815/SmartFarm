@@ -86,8 +86,11 @@ body {
 .status-temperature .status-value::after {
   content: '˚C';
 }
-.status-humidity .status-value::after, .status-illumination .status-value::after {
+.status-humidity .status-value::after {
   content: '%';
+}
+.status-illumination .status-value::after {
+  content: 'l x';  
 }
 .status-temperature .status-value {
   color: #a53838;
@@ -132,7 +135,7 @@ body {
   margin-top: 5px;
 }
 .status-stat {
-  width: 12vw;
+  width: 14vw;
   color: #fff;
   display: inline-block;
   font-size: 10px;
