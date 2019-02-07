@@ -19,21 +19,12 @@ function excute() {
 function login() {
     let id = document.getElementById('ID').value;
     let pass = document.getElementById('PASS').value;
-    firebase.database().ref('/'+id+'/').set({
-        id: map[id].id,
-        password: map[id].password,
+    firebase.database().ref('/'+id+'/').update({
         enter: map[id].enter+1,
-        data: {
-            button: map[id].data.button,
-            humidity: map[id].data.humidity,
-            illumination: map[id].data.illumination,
-            temperature: map[id].data.temperature,
-            water: map[id].data.water
-        }
     })
     if(map[id].enter > 1) {
-        location.href = './product.html';
+        location.href = './product.html#'+id;
     } else {
-        location.href = './first.html';
+        location.href = './first.html#'+id;
     }
 }

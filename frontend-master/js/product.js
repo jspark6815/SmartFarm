@@ -12,14 +12,18 @@ var database = firebase.database();
 
 map = {};
 
-var mylittlefarm = firebase.database().ref('/data/');
+var mylittlefarm = firebase.database().ref('/'+location.hash.slice(1)+'/');
 mylittlefarm.on('child_added', (data) => {
     map[data.key] = data.val()
     console.log(map);
     excute();
+    document.getElementById('nick').innerText = map.nick;
+    console.log(map.nick);
 })
 mylittlefarm.on('child_changed', (data) => {
     map[data.key] = data.val()
     console.log(map);
     excute();
+    document.getElementById('nick').innerText = map.nick;
+    console.log(map.nick);
 })

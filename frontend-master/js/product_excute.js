@@ -1,51 +1,53 @@
 function excute() {
-    document.getElementById('humidity').innerHTML = map.humidity;
-    document.getElementById('temperature').innerHTML = map.temperature;
-    document.getElementById('illumination').innerHTML = map.illumination;
-    document.getElementById('watered').innerHTML = map.water * 0.1;
+    let humidity = parseInt(map.data.humidity / 10.1);
+    let temperature = parseInt(map.data.temperature);
+    let illumination = parseInt(map.data.illumination);
+    console.log('origin temperature: '+map.data.temperature);
+    console.log('temperature: '+temperature);
+    document.getElementById('humidity').innerHTML = humidity;
+    document.getElementById('temperature').innerHTML = temperature;
+    document.getElementById('illumination').innerHTML = illumination;
     //temperature setting
-    if(map.temperature > 25) {
-        document.getElementById('temperature_stat').innerHTML = "너무 높음";
+    if(temperature > 30) {
+        document.getElementById('temperature_stat').innerText = "더워요ㅠ";
     }
-    else if(map.temperature <= 25 & map.temperature >= 20) {
-        document.getElementById('temperature_stat').innerHTML = "적정";
+    else if(temperature < 20) {
+        document.getElementById('temperature_stat').innerText = "추워요ㅠ";
     }
-    else if(map.temperature < 20) {
-        document.getElementById('temperature_stat').innerHTML = "너무 낮음";
+    else {
+        document.getElementById('temperature_stat').innerText = "좋아요!";
     }
 
     //humidity setting
-    if(map.humidity > 70) {
-        document.getElementById('humidity_stat').innerHTML = "너무 높음";
+    if(humidity > 85) {
+        document.getElementById('humidity_stat').innerHTML = "습해요ㅠ";
     }
-    else if(map.humidity <= 70 & map.humidity >= 40) {
-        document.getElementById('humidity_stat').innerHTML = "적정";
+    else if(humidity < 30) {
+        document.getElementById('humidity_stat').innerHTML = "건조해요ㅠ";
     }
-    else if(map.humidity < 40) {
-        document.getElementById('humidity_stat').innerHTML = "너무 낮음";
+    else {
+        document.getElementById('humidity_stat').innerHTML = "좋아요!";
     }
 
     //illumination setting
-    if(map.illumination > 70) {
-        document.getElementById('illumination_stat').innerHTML = "너무 높음";
+    console.log('origin illumination: '+map.data.illumination);
+    console.log('illumination: '+illumination);
+    if(illumination > 800) {
+        document.getElementById('illumination_stat').innerHTML = "강해요ㅠ";
     }
-    else if(map.illumination <= 70 & map.illumination >= 50) {
-        document.getElementById('illumination_stat').innerHTML = "적정";
+    else if(illumination < 100) {
+        document.getElementById('illumination_stat').innerHTML = "약해요ㅠ";
     }
-    else if(map.illumination < 50) {
-        document.getElementById('illumination_stat').innerHTML = "너무 낮음";
+    else {
+        document.getElementById('illumination_stat').innerHTML = "좋아요!";
     }
 }
 function dd() {
     write();
-    console.log("button : " + map.button);
+    console.log("button : " + map.data.button);
 }
 function write() {
-    firebase.database().ref('/data/').set({
-        button: 1,
-        humidity: map.humidity,
-        illumination: map.illumination,
-        temperature: map.temperature,
-        water: map.water
+    firebase.database().ref('/'+location.hash.slice(1)+'/data/').update({
+        button: 1
     })
 }
