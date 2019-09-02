@@ -12,7 +12,7 @@ var database = firebase.database();
 
 map = {};
 
-var mylittlefarm = firebase.database().ref('/'+location.hash.slice(1)+'/');
+var mylittlefarm = firebase.database().ref('/'+localStorage.id+'/');
 mylittlefarm.on('child_added', (data) => {
     map[data.key] = data.val()
     console.log(map);

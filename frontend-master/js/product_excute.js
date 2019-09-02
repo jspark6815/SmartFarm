@@ -43,7 +43,7 @@ function dd() {
     console.log("button : " + map.data.button);
 }
 function write() {
-    firebase.database().ref('/'+location.hash.slice(1)+'/data/').update({
+    firebase.database().ref('/'+localStorage.id+'/data/').update({
         button: 1
     })
 }
